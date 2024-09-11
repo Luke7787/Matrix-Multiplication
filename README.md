@@ -1,4 +1,4 @@
-# Lab 6: Performance Analysis of Parallel Matrix Multiplication
+# Performance Analysis of Parallel Matrix Multiplication
 
 ## Introduction
 
