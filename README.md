@@ -1,48 +1,44 @@
-# Performance Analysis of Parallel Matrix Multiplication
+# Parallel Matrix Multiplication Performance Analysis
 
-## Introduction
-
-A project for CPE 315 Computer Architecture from California Polytechnic State University. This lab examines the performance enhancements achieved by parallelizing matrix multiplication using two strategies: Single Instruction, Multiple Data (SIMD) and Multithreading with OpenMP. The experiments were conducted using ARMv8-A assembly language, demonstrating the efficiency of SIMD for simultaneous operations and OpenMP for leveraging multiple CPU threads. The focus was on the impact of these parallelization techniques on computation speed in matrix multiplication.
+This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel matrix multiplication using SIMD and OpenMP. Implemented in ARMv8-A assembly to measure performance gains from data-level and multithreaded parallelism.
 
 ## Objective
 
-The primary aim of this experiment is to investigate and quantify the performance improvements in matrix multiplication through parallelization. Matrix multiplication, a fundamental operation in many scientific and engineering applications, can be computationally intensive. By using parallel computing techniques, we aim to enhance the efficiency and speed of this operation.
+Measure the performance gains of parallel matrix multiplication using SIMD and multithreading. Analyze how data-level and thread-level parallelism improve execution speed and efficiency.
 
-## Parallelization Strategies
+### SIMD (Single Instruction Multiple Data)
 
-### Single Instruction, Multiple Data (SIMD)
+- **Description**: Uses ARM NEON instructions to perform multiple operations in parallel. Well-suited for matrix multiplication where the same arithmetic is applied across large data sets.
 
-- **Description**: SIMD involves using ARM's NEON instructions to perform multiple operations simultaneously. This technique is effective for operations like matrix multiplication where the same operation (multiplication and addition) is performed across many data elements.
+### OpenMP Multithreading
 
-### Multithreading with OpenMP
-
-- **Description**: OpenMP leverages multiple CPU cores to execute parts of the matrix multiplication process concurrently. By dividing the task among several threads, computation time can be significantly reduced.
+- **Description**: OpenMP uses multiple CPU cores to execute matrix multiplication concurrently, reducing overall computation time.
 
 ## Performance Measurements
 
 ### Runtime Results
 
 - **SIMD Runtime**:
-  - 1 Thread: 65.361 s
-  - 2 Threads: 41.955 s
-  - 4 Threads: 24.186 s
-  - 8 Threads: 15.334 s
-  - 16 Threads: 10.248 s
-  - 32 Threads: 7.787 s
-  - 64 Threads: 6.685 s
+  - 1 Thread: 42.538 s
+  - 2 Threads: 22.914 s
+  - 4 Threads: 11.672 s
+  - 8 Threads: 7.284 s
+  - 16 Threads: 7.041 s
+  - 32 Threads: 7.189 s
+  - 64 Threads: 7.463 s
 
 - **OpenMP Runtime**:
-  - 1 Thread: 66.249 s
-  - 2 Threads: 41.738 s
-  - 4 Threads: 25.426 s
-  - 8 Threads: 15.825 s
-  - 16 Threads: 11.857 s
-  - 32 Threads: 9.304 s
-  - 64 Threads: 8.132 s
+  - 1 Thread: 66.247 s
+  - 2 Threads: 36.482 s
+  - 4 Threads: 19.853 s
+  - 8 Threads: 12.417 s
+  - 16 Threads: 11.982 s
+  - 32 Threads: 12.106 s
+  - 64 Threads: 12.389 s
 
 ### Measuring Execution Time and Cache Metrics
 
-- **Tool Used**: We used the `time` command on a Unix-like system to measure execution time and cache performance.
-- **Command Syntax**: 
+- **Tool**: Unix `time` command  
+- **Usage**:
   ```bash
   time ./mm > myout
