@@ -1,10 +1,6 @@
 # Overview
 
-This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel matrix multiplication using SIMD and OpenMP. Implemented in ARMv8-A assembly to measure performance gains from data-level and multithreaded parallelism.
-
-## Objective
-
-Measure the performance gains of parallel matrix multiplication using SIMD and multithreading. Analyze how data-level and thread-level parallelism improve execution speed and efficiency.
+This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel matrix multiplication using SIMD and OpenMP. Implemented in ARMv8-A assembly, the project measures and analyzes the performance gains achieved through data-level parallelism (SIMD) and multithreading
 
 ### SIMD (Single Instruction Multiple Data)
 
