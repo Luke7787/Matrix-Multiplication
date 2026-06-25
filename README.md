@@ -3,11 +3,9 @@
 This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel matrix multiplication using SIMD and OpenMP. Implemented in ARMv8-A assembly, the project measures and analyzes the performance gains achieved through data-level parallelism (SIMD) and multithreading
 
 ### SIMD (Single Instruction Multiple Data)
-
 - **Description**: Uses ARM NEON instructions to perform multiple operations in parallel. Well-suited for matrix multiplication where the same arithmetic is applied across large data sets.
 
 ### OpenMP Multithreading
-
 - **Description**: OpenMP uses multiple CPU cores to execute matrix multiplication concurrently, reducing overall computation time.
 
 ## Performance Measurements
