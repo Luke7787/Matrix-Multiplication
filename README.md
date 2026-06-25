@@ -11,7 +11,6 @@ This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel m
 ## Performance Measurements
 
 ### Runtime Results
-
 - **SIMD Runtime**:
   - 1 Thread: 42.538 s
   - 2 Threads: 22.914 s
@@ -31,7 +30,6 @@ This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel m
   - 64 Threads: 12.389 s
 
 ### Measuring Execution Time and Cache Metrics
-
 - **Tool**: Unix `time` command  
 - **Usage**:
   ```bash
