@@ -1,4 +1,4 @@
-# Parallel Matrix Multiplication Performance Analysis
+# Overview
 
 This is a CPE 315 Computer Architecture project at Cal Poly exploring parallel matrix multiplication using SIMD and OpenMP. Implemented in ARMv8-A assembly to measure performance gains from data-level and multithreaded parallelism.
 
